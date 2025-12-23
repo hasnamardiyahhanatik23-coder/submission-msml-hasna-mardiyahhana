@@ -1,0 +1,56 @@
+Workflow Continuous Integration (CI)
+Nama: Hasna Mardiyahhana
+
+1. Tujuan Workflow CI
+Workflow Continuous Integration (CI) digunakan untuk memastikan bahwa
+proses training dan evaluasi model machine learning dapat berjalan
+secara konsisten setiap kali terjadi perubahan kode pada repository.
+
+CI membantu mendeteksi error lebih awal dan menjaga kualitas pipeline
+machine learning.
+
+2. Trigger Workflow
+Workflow CI dijalankan secara otomatis ketika terjadi:
+- Push ke branch main
+- Pull request ke branch main
+
+3. Tahapan Workflow CI
+Tahapan yang direncanakan dalam workflow CI adalah sebagai berikut:
+
+a. Setup Environment
+- Menjalankan workflow pada sistem operasi Ubuntu
+- Menginstall Python versi 3.x
+- Menginstall dependency dari file requirements.txt
+
+b. Data Preparation
+- Memastikan dataset dapat dibaca dengan benar
+- Melakukan preprocessing sesuai dengan pipeline yang digunakan
+  pada tahap eksperimen
+
+c. Model Training
+- Menjalankan file modelling.py
+- Melatih model Logistic Regression menggunakan data training
+
+d. Model Evaluation
+- Menghitung metrik evaluasi:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+- Memastikan model menghasilkan metrik evaluasi dengan baik
+
+e. Logging & Artifact
+- Mencatat hasil eksperimen menggunakan MLflow
+- Menyimpan artifact model hasil training
+
+4. Manfaat Workflow CI
+Dengan adanya workflow CI, proses pengembangan model menjadi:
+- Lebih terstruktur
+- Lebih konsisten
+- Mudah direproduksi
+- Mengurangi kesalahan manual
+
+5. Kesimpulan
+Workflow CI membantu memastikan bahwa setiap perubahan pada kode
+machine learning tidak merusak proses training dan evaluasi model,
+sehingga kualitas model tetap terjaga.
