@@ -1,49 +1,50 @@
 Eksperimen Model Machine Learning
 Nama: Hasna Mardiyahhana
+Username Dicoding: hasna_mardiyahhana_r6W5
 
-Dataset
-Dataset yang digunakan adalah dataset Loan Prediction.
-Tujuan: memprediksi status kelayakan pinjaman (Loan_Status).
+Repository GitHub:
+https://github.com/hasnamardiyahhanatik23-coder/submission-msml-hasna-mardiyahhana
+
+Struktur Repository Eksperimen:
+
+Eksperimen_SML_Hasna_Mardiyahhana/
+├── namadataset_raw/
+│   └── loan_prediction.csv
+├── preprocessing/
+│   ├── Eksperimen_SML_Hasna_Mardiyahhana.ipynb
+│   ├── automate_Hasna_Mardiyahhana.py
+│   └── namadataset_preprocessing/
+│       └── loan_prediction_clean.csv
+
+Dataset:
+Dataset yang digunakan adalah Loan Prediction Dataset.
+Target prediksi: Loan_Status (Y/N).
 Pembagian data: train:test = 80:20.
 
-Preprocessing
-Tahapan preprocessing yang dilakukan:
+Tahapan Preprocessing:
+1. Menangani missing value pada fitur numerik dan kategorikal.
+2. Encoding fitur kategorikal (Gender, Married, Education, dll).
+3. Standarisasi fitur numerik menggunakan StandardScaler.
 
-Menangani missing value pada fitur yang kosong.
+Model:
+Model yang digunakan adalah Logistic Regression dengan parameter:
+- max_iter = 200
 
-Encoding fitur kategorikal (misalnya Gender, Married, Education, dll) menjadi numerik.
+Logging & Tracking (MLflow):
+Eksperimen dicatat menggunakan MLflow Autolog.
+Experiment Name: Loan Prediction Experiment
 
-Normalisasi/standarisasi fitur numerik (menggunakan scaler) agar skala fitur seragam.
+Metrik evaluasi:
+- Accuracy: 0.86
+- Precision: 0.84
+- Recall: 0.99
+- F1-score: 0.91
 
-Model
-Model yang digunakan: Logistic Regression.
-Parameter utama:
+Artifact MLflow:
+- Model (MLmodel, model.pkl)
+- Conda environment
+- Requirements
+- Input example
 
-max_iter = 200
-
-Logging & Tracking (MLflow)
-Eksperimen dicatat menggunakan MLflow.
-
-Experiment Name : Loan Prediction Experiment
-
-Run Name : shivering-jay-534
-
-Run ID : 73c23ab546204f9499b60ecb72f2c356
-
-Metrik evaluasi yang dicatat pada MLflow:
-
-accuracy : 0.8617886178861789
-
-precision : 0.84
-
-recall : 0.9882352941176471
-
-f1_score : 0.9081081081081082
-
-Artifact yang tersimpan di MLflow:
-
-model/ (berisi MLmodel, model.pkl, conda.yaml, requirements.txt, input_example/serving input example)
-
-Kesimpulan
-Model Logistic Regression mampu memberikan performa yang cukup baik pada dataset Loan Prediction.
-Berdasarkan metrik MLflow, nilai recall dan f1_score tinggi, yang menunjukkan model cukup baik dalam mendeteksi kelas positif (Loan_Status = Y).
+Kesimpulan:
+Model Logistic Regression memberikan performa yang baik dengan nilai recall dan f1-score tinggi, sehingga mampu mendeteksi kelayakan pinjaman dengan baik.
