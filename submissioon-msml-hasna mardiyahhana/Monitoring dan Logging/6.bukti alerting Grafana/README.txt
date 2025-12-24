@@ -1,9 +1,8 @@
-# 6.bukti alerting Grafana (WAJIB)
+Bukti Alerting Grafana
 
-Masukkan screenshot alert rule + bukti notifikasi.
+Screenshot ini menampilkan halaman Alert rules pada Grafana.
+Alert rules digunakan untuk memantau kondisi sistem dan memicu notifikasi
+ketika metrik tertentu melewati ambang batas.
 
-Minimal:
-- alert_rule.png (rule)
-- alert_firing.png (status FIRING)
-Optional:
-- contact_point.png / notification_policy.png
+Pada screenshot terlihat daftar alert rules yang dikelola oleh Grafana,
+sebagai bukti bahwa sistem alerting telah dikonfigurasi.
